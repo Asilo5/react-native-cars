@@ -15,7 +15,7 @@ class CarList extends Component {
 
   renderList = () => {
     return this.state.carList.map(car => {
-      return <Text>{car.model[0].name}</Text>;
+      return <Text key={car.brand}>{car.model[0].name}</Text>;
     });
   };
 
