@@ -10,15 +10,17 @@ class CarList extends Component {
   componentDidMount() {
     axios
       .get('http://givecars.herokuapp.com/')
-      .then(resp => this.setState({carList: resp}));
+      .then(resp => this.setState({carList: resp.data}));
   }
 
+  renderList = () => {
+    return this.state.carList.map(car => {
+      return <Text>{car.model[0].name}</Text>;
+    });
+  };
+
   render() {
-    return (
-      <View>
-        <Text>Car List</Text>
-      </View>
-    );
+    return <View>{this.renderList()}</View>;
   }
 }
 
