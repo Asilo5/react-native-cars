@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  Linking,
+} from 'react-native';
 
 const CarDetail = ({brand}) => {
   return (
@@ -12,14 +19,14 @@ const CarDetail = ({brand}) => {
           <View>
             <Text>{models.name}</Text>
             <Image source={{uri: models.image}} style={styles.imageStyle} />
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => Linking.openURL(models.url)}>
+              <Text>Go To Site</Text>
+            </TouchableOpacity>
           </View>
         );
       })}
-      <View>
-        <TouchableOpacity style={styles.button}>
-          <Text>Go To Site</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 };
