@@ -11,7 +11,7 @@ const CarDetail = ({brand}) => {
         return (
           <View>
             <Text>{models.name}</Text>
-            {/* <Image source={brand.model[0].image} /> */}
+            <Image source={{uri: models.image}} style={styles.imageStyle} />
           </View>
         );
       })}
@@ -32,6 +32,9 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     marginRight: 5,
     marginTop: 10,
+  },
+  imageStyle: {
+    height: 300,
   },
 });
 
