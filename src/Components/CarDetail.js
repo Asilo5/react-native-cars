@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, Button, StyleSheet} from 'react-native';
+import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 
 const CarDetail = ({brand}) => {
   return (
@@ -16,7 +16,9 @@ const CarDetail = ({brand}) => {
         );
       })}
       <View>
-        <Text>Go To Site</Text>
+        <TouchableOpacity style={styles.button}>
+          <Text>Go To Site</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -35,6 +37,10 @@ const styles = StyleSheet.create({
   },
   imageStyle: {
     height: 300,
+  },
+  button: {
+    padding: 20,
+    alignItems: 'center',
   },
 });
 

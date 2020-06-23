@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, ScrollView} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import axios from 'axios';
 
 import CarDetail from './CarDetail';
@@ -17,13 +17,19 @@ class CarList extends Component {
 
   renderList = () => {
     return this.state.carList.map(car => {
-      return <CarDetail brand={car} key={car.model[0].name} />; 
+      return <CarDetail brand={car} key={car.model[0].name} />;
     });
   };
 
   render() {
-    return <ScrollView>{this.renderList()}</ScrollView>;
+    return <ScrollView style={styles.carList}>{this.renderList()}</ScrollView>;
   }
 }
+
+const styles = StyleSheet.create({
+  carList: {
+    padding: 20,
+  },
+});
 
 export default CarList;
