@@ -7,22 +7,18 @@
  */
 
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 
 import Header from './Header';
+import CarList from './CarList';
 
 const App = () => {
   return (
-    <View style={styles.app}>
+    <View>
       <Header title={'Autos'} />
+      <CarList />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  app: {
-    padding: 0,
-  },
-});
 
 export default App;
