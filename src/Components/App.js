@@ -28,7 +28,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   app: {
-    padding: 40,
+    padding: 0,
   },
 });
 
