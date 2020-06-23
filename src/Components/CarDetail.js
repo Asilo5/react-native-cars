@@ -1,12 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View, Text} from 'react-native';
 
-const CarDetail = () => {
-    return (
-      <View>
-          
-      </View>
-    );
-}
+const CarDetail = ({brand}) => {
+  return (
+    <View>
+      <Text>{brand.model[0].name}</Text>
+    </View>
+  );
+};
 
 export default CarDetail;
