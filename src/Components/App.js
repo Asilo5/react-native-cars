@@ -7,21 +7,14 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
 import Header from './Header';
 
 const App = () => {
   return (
     <View style={styles.app}>
-      <Header />
+      <Header title={'Autos'} />
     </View>
   );
 };
